@@ -1,0 +1,33 @@
+@import 'bootstrap/scss/bootstrap';
+
+$main-color: red;
+$comp-color: blue;
+
+@mixin title {
+  font-size: 5rem;
+}
+.my-button {
+  padding: 0.5em 1.5em;
+  color: white;
+  border: 1px solid grey;
+  border-radius: 4em;
+  margin: 5vh auto;
+
+  &--active {
+    @extend .my-button;
+    background-color: $main-color;
+  }
+
+  &--passive {
+    @extend .my-button;
+    background-color: $comp-color;
+  }
+}
+
+/* .my-button--active {
+  background-color: red;
+} */
+
+/* .my-button--passive {
+  background-color: blue;
+} */
